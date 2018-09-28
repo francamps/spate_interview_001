@@ -1,0 +1,35 @@
+{
+  "company": "The Doors",
+  "created_at": "Thu, 02 Aug 1969 12:32:42 GMT",
+  "role": "Musician",
+  "subscriptions": {
+    "subscription": {
+      "industry": {
+        "beauty": {
+          "image": "assets/img/beauty.jpg",
+          "key": "beauty",
+          "label": "Beauty"
+        },
+        "food": {
+          "image": "assets/img/food.jpg",
+          "key": "food",
+          "label": "Food"
+        }
+      },
+      "plan": {
+        "available": true,
+        "description": "Includes macro trend spotlights and trend deep dives for all categories in an industry.",
+        "feature": "1 industry",
+        "label": "Pro",
+        "planId": "plan_ID",
+        "price_tag": "$1000 / month"
+      }
+    }
+  },
+  "updated_at": "Thu, 02 Aug 2018 12:32:43 GMT",
+  "user_email": "jimmorrisson@thedoors.com",
+  "user_firstname": "Jim",
+  "user_id": 98658756,
+  "user_lastname": "Morrisson",
+  "user_phonenumber": null
+}

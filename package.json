@@ -1,0 +1,54 @@
+{
+  "name": "exercise001",
+  "version": "1.0.0",
+  "description": "## Overview",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --mode production --config webpack.config.js",
+    "webpack:dev": "webpack -d --watch --mode=development",
+    "webpack:prod": "NODE_ENV=production node node_modules/.bin/webpack",
+    "styles:all": "node-sass src/scss/main.scss -o public/css/ --quiet",
+    "devAll": "concurrently -r \"npm run server:dev\" \"npm run styles:all\" \"npm run webpack:dev\"",
+    "dev": "concurrently -r \"npm run styles:all\" \"npm run webpack:dev\"",
+    "lint": "prettier application/frontend/src/**/*.{js,jsx} && prettier --write application/frontend/scss/**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francamps/spate_interview_001.git"
+  },
+  "author": "Spate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francamps/spate_interview_001/issues"
+  },
+  "homepage": "https://github.com/francamps/spate_interview_001#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.3",
+    "css-loader": "^1.0.0",
+    "es6-promise": "^4.2.5",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^2.0.0",
+    "imports-loader": "^0.8.0",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "path": "^0.12.7",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}

@@ -6,7 +6,7 @@ In this exercise, we'll ask you to build a pretty conventional 'My Account' view
 
 The end result should be styled. It could be made to look like the following image, but feel free to improve it visually or go a different route. We will also take into account a certain attention to design.
 
-![My Account view](assets/img/myaccount.png)
+![My Account view](src/assets/img/myaccount.png)
 
 ## Requirements
 

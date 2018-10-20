@@ -50,6 +50,9 @@
     "mini-css-extract-plugin": "^0.4.4",
     "node-sass": "^4.9.3",
     "path": "^0.12.7",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
@@ -57,7 +60,8 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "fs": "0.0.1-security",
+    "fs-extra": "^7.0.0",
+    "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",

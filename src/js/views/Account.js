@@ -5,7 +5,11 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 
 import { theme } from '../theme'
 import {
-    Layout, EditableText, Grid, GridItem
+    Layout,
+    EditableText,
+    Grid,
+    GridItem,
+    Button
 } from '../components'
 
 import * as UserActions from '../state/actions/user.actions'
@@ -102,7 +106,8 @@ class AccountView extends React.PureComponent {
                     { subscriptions }
                 </div>
                 <div className={css(styles.userActions)}>
-                    <div></div>
+                    <Button onClick={() => {}}>Update User Data</Button>
+                    <Button type="secondary" onClick={() => {}}>Log Out</Button>
                 </div>
             </Layout>
         );
@@ -186,7 +191,9 @@ const styles = StyleSheet.create({
     userActions: {
         borderTop: `1px dashed ${theme.color_lightGray}`,
         width: '100%',
-        padingTop: `${theme.space_lg}`
+        padingTop: `${theme.space_lg}`,
+        // display: 'flex',
+        // flexDirection: 'column'
     }
 
 })

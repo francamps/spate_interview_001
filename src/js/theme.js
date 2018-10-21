@@ -7,11 +7,17 @@ export const theme = {
     space_lg: '48px',
     space_xl: '64px',
 
+    // RADIUS
+    borderRadius_base: '4px',
+
     // COLORS
     color_black: '#000',
+    color_darkGray: '#333',
     color_primary: '#8445ff',
     color_secondary: '#6212ff',
     color_lightGray: '#bcbcbc',
+    color_gray_primary: '#e1e0e1',
+    color_gray_secondary: '#cac9ca',
 
     // FONTS
     font_family_base: 'Montserrat',

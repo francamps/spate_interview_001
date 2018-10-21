@@ -172,8 +172,8 @@ class AccountView extends React.PureComponent {
                     {
                         editing ? (
                             <div>
-                                <Button type="secondary" onClick={this.onCancel}>Cancel</Button>
                                 <Button onClick={this.onSave}>Save</Button>
+                                <Button type="secondary" onClick={this.onCancel}>Cancel</Button>
                             </div>
                         )
                             : (

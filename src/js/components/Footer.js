@@ -12,10 +12,10 @@ export default class Footer extends React.PureComponent {
                 <div className={css(styles.first)}>Hope you liked the demo!</div>
                 <div className={css(styles.second)}>
                     <div>
-                        <a target="blank" href="https://github.com/kruulik/spate_interview_001"><span className={css(styles.link)}>Portfolio&nbsp;&nbsp;</span></a>
+                        <a target="blank" href="http://karoliskrulis.com/"><span className={css(styles.link)}>Portfolio&nbsp;&nbsp;</span></a>
                     </div>
                     <div>
-                        <a target="blank" href="https://github.com/kruulik/spate_interview_001"><span className={css(styles.link)}>Repo</span></a>
+                        <a target="blank" href="https://github.com/kruulik/spate_interview_001"><span className={css(styles.link)}>&nbsp;&nbsp;Repo</span></a>
                     </div>
 
                 </div>

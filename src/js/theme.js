@@ -41,4 +41,6 @@ export const theme = {
     // TRANSITIONS
     bezier: 'all .3s cubic-bezier(.645,.045,.355,1)',
 
+    // SHADING
+    focus_shadow: '0 0 2px 0 rgba(132, 69, 255, 0.9)'
 }

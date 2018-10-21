@@ -64,6 +64,8 @@ const styles = StyleSheet.create({
         marginBottom: `${theme.space_xs}`
     },
     input: {
+        borderRadius: `${theme.borderRadius_base}`,
+        border: `1px solid ${theme.color_gray_primary}`,
         fontFamily: `${theme.font_family_base}`,
         color: `${theme.color_darkGray}`,
         transition: 'all .3s',
@@ -72,6 +74,13 @@ const styles = StyleSheet.create({
         width: 240,
         '::placeholder': {
             color: `${theme.color_lightGray}`,
+        },
+        ':hover': {
+            border: `1px solid ${theme.color_primary}`
+        },
+        ':focus': {
+            border: `1px solid ${theme.color_secondary}`,
+            boxShadow: `${theme.focus_shadow}`
         }
     },
     text: {

@@ -36,10 +36,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                options: {
+                    presets: ['env', 'react'],
+                    plugins: ['transform-class-properties']
                 }
             }, {
                 test: /\.(png|jpg)$/,

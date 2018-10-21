@@ -17,6 +17,12 @@ export const receiveUpdatedUser = (data) => {
     }
 }
 
+export const receiveNullUser = () => {
+    return {
+        type: types.USER_LOGOUT
+    }
+}
+
 export const getUserData = () => {
     return async (dispatch) => {
         try {
@@ -34,6 +40,16 @@ export const updateUser = (data) => {
             // NOTE: Normally I would be calling an API here, but for demo
             // purposes I will just work from store once it has been created
             dispatch(receiveUpdatedUser(data))
+        } catch (err) {
+            console.log('updateUser.err: ', err)
+        }
+    }
+}
+
+export const logoutUser = () => {
+    return async (dispatch) => {
+        try {
+            dispatch(receiveNullUser())
         } catch (err) {
             console.log('updateUser.err: ', err)
         }

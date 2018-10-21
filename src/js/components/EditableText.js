@@ -4,8 +4,22 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 import { theme } from '../theme'
 
 export default class EditableTest extends React.PureComponent {
+
+    saveInput = (node) => {
+        this.input = node;
+    }
+
+    onChange = (e) => {
+        e.preventDefault();
+        const { name, onChange } = this.props;
+        onChange(name, e.target.value)
+    }
+
     render() {
-        const { label, text, editing } = this.props;
+        const {
+            label, value, editing
+        } = this.props;
+
         return (
             <div className={css(styles.wrapper)}>
 
@@ -15,10 +29,18 @@ export default class EditableTest extends React.PureComponent {
 
                 {
                     editing ? (
-                        <input />
+                        <input
+                            value={value || ''}
+                            onChange={this.onChange}
+                            className={
+                                css(
+                                    styles.input,
+                                )}
+                            ref={this.saveInput}
+                        />
                     ) : (
                         <div className={css(styles.text)}>
-                            {text || ''}
+                            {value || ''}
                         </div>
                     )
                 }
@@ -31,7 +53,7 @@ export default class EditableTest extends React.PureComponent {
 
 const styles = StyleSheet.create({
     wrapper: {
-        width: '100%',
+        // width: '100%',
         marginBottom: `${theme.space_md}`
     },
     label: {
@@ -42,7 +64,15 @@ const styles = StyleSheet.create({
         marginBottom: `${theme.space_xs}`
     },
     input: {
-
+        fontFamily: `${theme.font_family_base}`,
+        color: `${theme.color_darkGray}`,
+        transition: 'all .3s',
+        padding: `${theme.space_xs} ${theme.space_sm}`,
+        outline: `0px`,
+        width: 240,
+        '::placeholder': {
+            color: `${theme.color_lightGray}`,
+        }
     },
     text: {
         fontFamily: `${theme.font_family_other}`,

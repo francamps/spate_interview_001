@@ -9,6 +9,8 @@ const videoReducer = (user = {}, action) => {
             return action.data
         case types.USER_UPDATE:
             return _.merge(user, action.data)
+        case types.USER_LOGOUT:
+            return {}
         default:
             return user
     }

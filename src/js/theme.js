@@ -36,6 +36,9 @@ export const theme = {
 
     font_spacing_wide: '0.2em',
     font_spacing_base: '0.1em',
-    font_spacing_narrow: '-0.025em'
+    font_spacing_narrow: '-0.025em',
+
+    // TRANSITIONS
+    bezier: 'all .3s cubic-bezier(.645,.045,.355,1)',
 
 }

@@ -20,7 +20,7 @@ class Header extends React.PureComponent {
             <div className={css(styles.header)}>
                 <div className={css(styles.header_logotype)}>SPATE</div>
                 {
-                    !!user.user_firstname ? (
+                    !!user.user_id ? (
                         <div>
                             <span className={css(styles.sessionNav)}>
                               music
@@ -31,7 +31,7 @@ class Header extends React.PureComponent {
                         </div>
                     ) : (
                         <div className={css(styles.sessionNav)}>
-                            <span onClick={this.onLogin} className={css(styles.login)}>log in</span>
+                            <span onClick={this.onLogin} className={css(styles.link)}>log in</span>
                         </div>
                     )
                 }
@@ -55,8 +55,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(Header)
 
 const styles = StyleSheet.create({
     header: {
+        margin: `${theme.space_md}`,
         borderBottom: '1px solid',
-        width: '100%',
         gridArea: 'HEADER',
         fontWeight: `${theme.font_weight_light}`,
         paddingBottom: `${theme.space_md}`,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         marginLeft: `${theme.space_md}`
     },
 
-    login: {
+    link: {
         fontWeight: `${theme.font_weight_medium}`,
         color: `${theme.color_primary}`,
         cursor: 'pointer',

@@ -22,13 +22,6 @@ class AccountView extends React.PureComponent {
         editing: false
     }
 
-    // componentDidMount() {
-    //     const { getUserData, user } = this.props;
-    //     setTimeout(() => {
-    //         getUserData()
-    //     }, 1000)
-    // }
-
     componentDidUpdate(prevProps, prevState) {
         const { user } = this.props;
 
@@ -84,11 +77,13 @@ class AccountView extends React.PureComponent {
         const { editing, user } = this.state;
         const { getUserData } = this.props;
 
-        if (!user.user_firstname) {
+        if (!user.user_id) {
             return (
                 <Layout>
                     <div className={css(styles.loading)}>
-                    Please log in to continue.
+                        <span>Please&nbsp;</span>
+                        <span className={css(styles.link)} onClick={() => getUserData()}> Log In</span>
+                        <span>&nbsp;to continue.</span>
                     </div>
                 </Layout>
             )
@@ -271,13 +266,21 @@ const styles = StyleSheet.create({
         marginBottom: `${theme.space_lg}`
     },
 
+    link: {
+        fontWeight: `${theme.font_weight_medium}`,
+        color: `${theme.color_primary}`,
+        cursor: 'pointer',
+        transition: 'all .3s cubic-bezier(.645,.045,.355,1)',
+        ':hover': {
+            color: `${theme.color_secondary}`
+        }
+    },
+
     userActions: {
         borderTop: `1px dashed ${theme.color_lightGray}`,
         paddingTop: `${theme.space_md}`,
         width: '100%',
         padingTop: `${theme.space_lg}`,
-        // display: 'flex',
-        // flexDirection: 'column'
     }
 
 })

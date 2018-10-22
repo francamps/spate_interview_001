@@ -7,11 +7,13 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:100,300,500,700,900" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="app" class="app"></div>
 
-    <script type="text/javascript" src={{ url_for( 'static', filename='js/main.bundle.js',  v=[config['CACHE_BUST_VERSION']] ) }}></script>
+    <!-- <script type="text/javascript" src={{ url_for( 'static', filename='js/main.bundle.js',  v=[config['CACHE_BUST_VERSION']] ) }}></script> -->
+    <script type="text/javascript" src="js/main.bundle.js"></script>
 </body>
 </html>
